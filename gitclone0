@@ -1,0 +1,18 @@
+#Version 1
+
+# Rather interactive version : user is prompted to provide each required value
+#Can be stored on git with no restriction as no unencrypted credential is provided
+
+#!/bin/bash
+read -p "Enter the name of the repo you want to clone : "
+export GITREPO="$REPLY"
+read -p "Paste your git token : "
+export GITTOKEN="$REPLY"
+read -p "Enter the email registered on your git account : "
+export GITUSERMAIL="$REPLY"
+read -p "Enter your git username : "
+export GITUSERNAME="$REPLY"
+git config --global user.email "$GITUSERMAIL"
+git config --global user.name "$GITUSERNAME"
+git clone https://$GITTOKEN@github.com/$GITUSERNAME/$GITREPO.git#!/bin/bash
+git clone https://$token@github.com/jmitchell35/$repo.git

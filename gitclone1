@@ -1,0 +1,14 @@
+#Version 2
+
+#Version with more rigidity to it : replace all values directly into the file.
+#Can't be stored on github after modification. Token and credential data rejected.
+
+#!/bin/bash
+export GITTOKEN=""
+export GITUSERMAIL=""
+export GITUSERNAME=""
+read -p "Enter the name of the repo you want to clone : "
+export GITREPO="$REPLY"
+git config --global user.email "$GITUSERMAIL"
+git config --global user.name "$GITUSERNAME"
+git clone https://$GITTOKEN@github.com/$GITUSERNAME/$GITREPO.git

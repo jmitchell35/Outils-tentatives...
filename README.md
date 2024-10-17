@@ -1,0 +1,3 @@
+This repo beholds a few side projects. 
+
+Tools to automate process for school, reflections, explorations...
